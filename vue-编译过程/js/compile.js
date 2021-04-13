@@ -1,0 +1,8 @@
+class Compile {
+	constructor() {
+
+	},
+	render() {
+
+	},
+}

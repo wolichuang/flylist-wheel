@@ -1,0 +1,46 @@
+<!DOCTYPE >
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>圣诞树</title>
+    <style>
+      .header {
+        width: 0px;
+        height: 0px;
+        border-top: 100px solid white;
+        border-right: 100px solid white;
+        border-bottom: 100px solid green;
+        border-left: 100px solid white;
+        float: left;
+        margin-left: 100px;
+      }
+      .main {
+        width: 0px;
+        height: 0px;
+        border-top: 200px solid white;
+        border-right: 200px solid white;
+        border-bottom: 200px solid green;
+        border-left: 200px solid white;
+      }
+      .footer {
+        width: 100px;
+        height: 200px;
+        background: gray;
+        margin-left: 150px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header"></div>
+    <div class="main"></div>
+    <div class="footer"></div>
+    <script>
+      const fullscreen = (mode = true, el = "body") =>
+        mode
+          ? document.querySelector(el).webkitRequestFullScreen()
+          : document.exitFullscreen()
+
+      fullscreen()
+    </script>
+  </body>
+</html>
