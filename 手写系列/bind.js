@@ -13,10 +13,10 @@ const bind = (fn, context, ...WrapArgs) => (...args) =>
   fn.apply(context, [...WrapArgs, ...args]);
 
 function greet(greeting, production) {
-  return greeting + ' ' + this.user + production;
+  return greeting + " " + this.user + production;
 }
 var person = {
-  user: 'wxh'
+  user: "wxh",
 };
 const personGreet = bind(greet, person);
-console.log(personGreet('hi', 'hello'));
+console.log(personGreet("hi", "hello"));
