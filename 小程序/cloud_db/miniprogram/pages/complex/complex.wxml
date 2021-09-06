@@ -1,0 +1,2 @@
+<van-button type="primary" block square
+bindtap="and">price between 0-50</van-button>

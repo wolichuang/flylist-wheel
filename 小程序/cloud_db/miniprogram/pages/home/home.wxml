@@ -1,0 +1,5 @@
+<van-button square 
+type="primary"
+block bind:click="navigateToAdd">小🐻三贱客</van-button>
+<van-button square block
+type="warning" bind:click="navigateToIndex">"onepiece"</van-button>

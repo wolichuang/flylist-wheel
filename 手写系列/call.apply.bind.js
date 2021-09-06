@@ -1,3 +1,10 @@
+/*
+ * @Description: 
+ * @Author: Chuang Li
+ * @Date: 2021-04-25 13:57:38
+ * @LastEditTime: 2021-09-06 15:23:38
+ * @LastEditors: Chuang Li
+ */
 // 实现 call
 Function.prototype.myCall = function (context, ...args) {
   // 获取第一个参数（注意第一个参数为null或undefined，this指向window），构建对象
@@ -46,3 +53,19 @@ Function.prototype.myBind = function (context, ...args) {
 
   return fBound;
 };
+
+
+// test - call
+let foo = {
+  value: 1
+}
+function bar(name, age) {
+  console.log(name);
+  console.log(age);
+  // this 指向全局 对象的方法被调用
+  // bar 作为 foo 的方法调用
+  console.log(this.value); //由函数的调用方式决定
+}
+bar.myCall(foo, 'wxh', 35)
+// test - apply
+bar.myApply(foo,['wxh',35])

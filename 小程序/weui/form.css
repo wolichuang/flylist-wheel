@@ -1,0 +1,335 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    color: white;
+}
+
+.page {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    box-sizing: border-box;
+    opacity: 0;
+    z-index: 1;
+}
+
+.page.js_show {
+    opacity: 1;
+}
+
+[class*=" form_"].page, [class^=form_].page {
+    padding: 0;
+}
+
+.weui-form {
+    padding: calc(56px + env(safe-area-inset-top)) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    line-height: 1.4;
+    min-height: 100%;
+    box-sizing: border-box;
+}
+
+.weui-form__text-area {
+    padding: 0 32px;
+    color: rgba(0,0,0,0.9);
+    text-align: center;
+}
+
+h2 {
+    display: block;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.weui-form__title {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.36;
+    margin: 0;
+}
+
+.weui-form__desc {
+    font-size: 17px;
+    margin-top: 16px;
+}
+
+.weui-form__control-area {
+    -webkit-box-flex: 1;
+    flex: 1;
+    margin: 48px 0;
+    /* margin-bottom: 120px; */
+}
+
+.weui-cells__title {
+    color: rgba(0,0,0,0.5);
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.weui-cells__group_form .weui-cells__title {
+    margin-bottom: 8px;
+    padding: 0 32px;
+    color: rgba(0,0,0,0.5);
+}
+
+.weui-cells__group_form:first-child .weui-cells__title {
+    margin-top: 0;
+}
+
+.weui-cells {
+    background-color: #fff;
+    line-height: 1.41176471;
+    font-size: 17px;
+    overflow: hidden;
+    position: relative;
+}
+
+.weui-cells__title+.weui-cells {
+    margin-top: 0;
+}
+
+.weui-cell:before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    height: 1px;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    color: rgba(0,0,0,0.1);
+    transform-origin: 0 0;
+    transform: scaleY(0.5);
+    z-index: 2;
+}
+
+.weui-cells__group_form .weui-cells:before, .weui-cells__group_form .weui-cell:before {
+    left: 32px;
+    right: 32px;
+}
+
+.weui-cells:after {
+    content: " ";
+    position: absolute;
+    bottom: 0;
+    height: 1px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    color: rgba(0,0,0,0.1);
+    transform-origin: 0 100%;
+    transform: scaleY(0.5);
+    z-index: 2;
+}
+
+.weui-cells__group_form .weui-cells:after {
+    left: 32px;
+    right: 32px;
+}
+
+.weui-cell {
+    position: relative;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.weui-cells__group_form .weui-cell {
+    padding: 16px 32px;
+}
+
+.weui-cells__group_form .weui-cell:not(.weui-cell_link) {
+    color: rgba(0,0,0,0.9);
+}
+
+.weui-cells__group_form .weui-cell__hd {
+    padding-right: 16px;
+}
+
+.weui-cell__bd {
+    -webkit-box-flex: 1;
+    flex: 1;
+}
+
+label {
+    cursor: default;
+}
+
+.weui-label {
+    display: block;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.weui-cells__group_form .weui-label {
+    max-width: 5em;
+    margin-right: 8px;
+}
+
+.page.form_page .weui-label {
+    width: 4.1em;
+}
+
+input {
+    /* -webkit-writing-mode: horizontal-tb !important; */
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    font: 400 13.3333px Arial;
+}
+
+input, textarea {
+    caret-color: #07c160;
+}
+
+input::-webkit-input-placeholder {
+    color: rgba(0,0,0,0.3);
+}
+
+.weui-input {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    -webkit-appearance: none;
+    background-color: transparent;
+    font-size: inherit;
+    color: inherit;
+    height: 1.41176471em;
+    line-height: 1.41176471;
+}
+
+.weui-cells_form input, .weui-cells_form textarea, .weui-cells_form label[for] {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.weui-form__tips-area {
+    overflow: hidden;
+}
+
+.weui-form__tips-area, .weui-form__extra-area {
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.weui-form__tips {
+    color: rgba(0,0,0,0.5);
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+.weui-form__opr-area {
+    margin-bottom: 44px;
+}
+
+a:-webkit-any-link {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.weui-btn {
+    position: relative;
+    display: block;
+    width: 184px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 8px 24px;
+    box-sizing: border-box;
+    font-weight: 700;
+    font-size: 17px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    line-height: 1.41176471;
+    border-radius: 4px;
+    overflow: hidden;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.weui-btn_disabled {
+    color: rgba(0,0,0,0.2);
+    background-color: #f2f2f2;
+}
+
+.weui-form__tips-area, .weui-form__extra-area {
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.weui-footer {
+    color: rgba(0,0,0,0.3);
+    font-size: 14px;
+    line-height: 1.4;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.weui-footer__links {
+    font-size: 0;
+    /* margin-top: 18px; */
+}
+
+.weui-footer__link {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 8px;
+    position: relative;
+    font-size: 14px;
+}
+
+.weui-footer a, .weui-footer navigator {
+    color: #576b95;
+}
+
+.weui-form .weui-footer, .weui-form .weui-footer__link {
+    font-size: 14px;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.weui-footer__text {
+    padding: 0 16px;
+    font-size: 12px;
+    margin-top: 0;
+}

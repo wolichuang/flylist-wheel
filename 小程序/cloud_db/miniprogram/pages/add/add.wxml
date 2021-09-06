@@ -1,0 +1,3 @@
+<van-button square 
+type="primary"
+block bind:click="addData">🦌乔巴</van-button>

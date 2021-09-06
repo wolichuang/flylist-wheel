@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./common.css">
+    <link rel="stylesheet" href="./weui-button.css">
+    <link rel="stylesheet" href="./weui-primary-loading.css">
+</head>
+<body>
+    <!--整体 类名 important-->
+    <!-- 国际化命名规范 BEM
+    .page 开设一个区块Block
+        .page_hd-Element 元素
+        MOdel -->
+    <div class="page">
+        <div class="page_hd">
+            <h1 class="page_title">Button</h1>
+            <p class="page_desc">按钮</p>
+        </div>
+        <div class="page_bd">
+            <!-- weui 库名 tm tb 不是结构  是组件 -->
+            <a href="#" class="weui-btn weui-btn_primary">页面主操作</a>
+            <a href="" class="weui-btn weui-btn_default">页面次要操作</a>
+            <a href="" class="weui-btn weui-btn_primary weui-btn_disabled">禁用按钮</a>
+            <a href="" class="weui-btn weui-btn_primary weui-btn_loading">
+                <span class="weui-primary-loading weui-prymary-loading_transparent">
+                    <i class="weui-primary-loading_dot"></i>
+                </span>
+                加载中按钮
+            </a>
+        </div>
+    </div>
+    <!-- .page>(.page_hd>h1.page_title+p.page_desc)+.page_bd>a.weui-btn -->
+    <!-- .sidebar-block>.recommend-author-block>.user-block-header>.use-list>.item*3>a.#>span -->
+    <!-- .sidebar.user>.sidebar_recommed-authon>header.sidebar_hd+(.user>.user_item>a.user_link>img.user_avatar) -->
+</body>
+</html>

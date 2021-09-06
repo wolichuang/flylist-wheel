@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #000;
+}
+
+a {
+    text-decoration: none;
+}
+
+.page {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    overflow-y: scroll;
+    /* -webit 前缀 兼容 chrom webkit 
+        gun丝滑
+    */
+    -webkit-overflow-scrolling: touch;
+    z-index: 1;
+}
+
+.page_hd {
+    padding: 40px;
+}
+
+.page_title {
+    font-style: 20px;
+    text-align: left;
+    font-weight: 400;
+    color: #fff;
+}
+
+.page_desc {
+    margin-top: 4px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.page_bd {
+    padding: 0;
+}
+
