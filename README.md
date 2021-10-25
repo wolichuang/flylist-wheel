@@ -13,3 +13,6 @@
 装饰（decorator）模式
 观察者（observer）模式
 策略（strategy）模式
+
+
+123123123
